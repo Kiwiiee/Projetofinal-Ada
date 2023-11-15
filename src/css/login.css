@@ -1,0 +1,68 @@
+label{
+    color: white;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    font-size: 50px;
+    margin-top: -10vh;
+
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 90vh;
+    background-color: #3e655c;
+
+}
+
+
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 75vh;
+    background-color: #Caeae3;
+    transform: translateY(-230px);
+    transition: .8s ease-in-out;
+    border-radius: 150px 150px 0 0;
+}
+
+input{
+    width: 20vw;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 15px;
+
+
+}
+
+
+button:hover{
+    background: #72a096;
+}
+
+.btnCadastro label{
+    color: aqua;
+    transform: scale(.3)
+}
+
+#chk:checked ~ .login{
+    transform: translateY(-730px);
+    border-radius: 100px 100px 0 0;
+
+}
+#chk:not(:checked) ~ .login label{
+    transform: scale(.9);
+}
+#chk:checked ~ .signup label{
+    transform: scale(.9);
+}

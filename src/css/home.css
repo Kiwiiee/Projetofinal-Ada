@@ -1,0 +1,13 @@
+.box input{
+    width:0;
+}
+
+.box:hover input{
+    width: 50vw;
+}
+
+input[type="search"]:focus{
+    width: 50vw;
+}
+
+
