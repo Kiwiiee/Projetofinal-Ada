@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 import '../css/carrosel.css'
 import axios from "axios";
 import {Link} from "react-router-dom";
+import Avaliacoes from '../pages/Avaliacoes'
+import { BrowserRouter , Routes , Route } from 'react-router-dom'
 
 const MAX_VISIBILITY = 3;
 
@@ -15,7 +17,10 @@ const MAX_VISIBILITY = 3;
 
 const Card = ({src , titulo , id}) => (
   <div className='card' >
-    <Link to="/Avaliacoes" state={{ img : src , title: titulo , id: id }}><img src={src} style={{width: "45vw" , height: "47vh" , borderRadius:"30px" , marginTop: "-3.5vh" , marginLeft: "-5vh" }} ></img></Link>
+    <Routes>
+      <Route path="Avaliacoes" render={(props) => <Avaliacoes {...props} img={src} title={titulo} id={id}/>} img={src} title={titulo} id={id}/>
+    </Routes>
+    <Link to="/Avaliacoes" ><img src={src} style={{width: "45vw" , height: "47vh" , borderRadius:"30px" , marginTop: "-3.5vh" , marginLeft: "-5vh" }} ></img></Link>
     <Subtitulo name={titulo}></Subtitulo>
   </div>
 );
@@ -134,11 +139,12 @@ function Recomendados(){
                         marginTop: "5vh",
                         borderRadius: "60px"
                     }}>
-                            <Carousel>
+                            <Carousel >
                             {numberGames.map((_, i) => (
                                 <Card src={imgs[i + 1]} titulo={names[i + 1]} id={id}/>
                             ))}
                             </Carousel>
+                            
                     </div>
 
                 </div>

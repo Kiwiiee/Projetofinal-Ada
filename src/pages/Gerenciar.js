@@ -3,6 +3,7 @@ import Container from '../components/container'
 import React, { Component } from 'react';
 import Botao from "../components/botao"
 import Titulo from "../components/titulo"
+import Formulario from "../components/formulario"
 
 function GerenciarConta(){
 
@@ -15,11 +16,13 @@ function GerenciarConta(){
             height: "100vh"}}>
                 <Navbar/>
 
+                <Container>
 
-                {numero == false ?
+                {admin == false ?
+                
 
                 
-                <form >
+                <Formulario style={{marginTop: "3vh" , borderRadius: "60px"}}>
                     <Titulo name="Alterar seus dados"></Titulo>
                     <input type='text' name="txt" placeholder='Nome completo' required />
                     <input type='email' name="email" placeholder='Email' required />
@@ -28,15 +31,17 @@ function GerenciarConta(){
                     <input type='text' name="estado" placeholder='Estado' required />
                     <input type='text' name="pais" placeholder='País' required />
                     <Botao name="Alterar"></Botao>
-                </form>
+                </Formulario>
 
 
                  :
 
-                    <>
+                    <div style={{marginTop: "20vh"}}>
+
+                    <Titulo name="Área Admin" ></Titulo>
 
                            
-                    <form >
+                    <Formulario style={{marginTop: "3vh" , borderRadius: "60px"}}>
                         <Titulo name="Alterar seus dados"></Titulo>
                         <input type='text' name="txt" placeholder='Nome completo' required />
                         <input type='email' name="email" placeholder='Email' required />
@@ -45,10 +50,10 @@ function GerenciarConta(){
                         <input type='text' name="estado" placeholder='Estado' required />
                         <input type='text' name="pais" placeholder='País' required />
                         <Botao name="Alterar"></Botao>
-                    </form>
+                    </Formulario>
 
 
-                    <form>
+                    <Formulario style={{marginTop: "3vh" , borderRadius: "60px"}}>
                     <Titulo name="Adicione ou altere categoria:"> </Titulo>
 
                         //mostrar todas categorias
@@ -57,32 +62,38 @@ function GerenciarConta(){
                         
 
                         <Botao name="Adicionar categoria"></Botao>
-                    </form>
+                    </Formulario>
 
 
     
-                    <form>
+                    <Formulario style={{marginTop: "3vh" , borderRadius: "60px"}}>
                     <Titulo name="Adicione um novo jogo:"> </Titulo>
                         <input type='text' name="txt" placeholder='Nome do jogo' required />
-                        <select name="categoria" id="categoria">
+                        <br />
+                        <select name="categoria" id="categoria" style={{width:"20vw" , height: "5vh" , borderWidth: "2px"}}>
                             <option value="volvo">Volvo</option>
                             <option value="saab">Saab</option>
                             <option value="mercedes">Mercedes</option>
                             <option value="audi">Audi</option>
                         </select>
+                        <br />
                         <input type='text' name="urlJogo" placeholder='Url para o jogo' required />
+                        <br />
                         <input type='text' name="urlVideo" placeholder='Url para video de demonstração' required />
-                        <textarea name="txt" placeholder="Entre a descrição aqui" required style={{width: "20vw" , height: "10vh"}}/>
+                        <br />
+                        <textarea name="txt" placeholder="Entre a descrição aqui" required style={{width: "20vw" , height: "10vh" , borderWidth: "2px"}}/>
+                        <br />
                         <label htmlFor='img' style={{fontSize: "20px"}}>Escolha uma imagem para ilustrar:</label>
+                        <br />
                         <input type="file" id="img" name="img" accept="image/png, image/jpeg" />
                         <Botao name="Adicionar jogo"></Botao>
-                    </form>
+                    </Formulario>
 
             
                 
-                    </>
+                    </div>
                 }
-          
+          </Container>
         </div>
             
         );

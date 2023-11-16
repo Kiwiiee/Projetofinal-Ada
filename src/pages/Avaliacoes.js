@@ -3,6 +3,7 @@ import Container from '../components/container'
 import React, { Component } from 'react';
 import Subtitulo from "../components/subtitulo"
 import Texto from "../components/texto"
+import Formulario from "../components/formulario"
 import Avaliacao from "../components/avaliacao"
 import Titulo from "../components/titulo"
 import Botao from "../components/botao"
@@ -164,22 +165,13 @@ class Avaliacoes extends Component{
                         alignItems: "center" , 
                         flexDirection: "column" , 
                         marginTop: "20vh"}}>
-                            <img src={this.props.location.state.img} style={{width: "20vw"}}></img>
-                            <Subtitulo name={this.props.location.state.title}></Subtitulo>
+                            <img src={this.props.img} style={{width: "20vw"}}></img>
+                            <Subtitulo name={this.props.title}></Subtitulo>
                             <Texto name={"-"}></Texto>
 
                         </div>
 
-                        <form style={{
-                            background: "#Caeae3" , 
-                            width: "65vw"   , 
-                            display: "flex" , 
-                            justifyContent: "center" , 
-                            alignItems: "center" , 
-                            flexDirection: "column" , 
-                            marginLeft: "2vw" , 
-                            height: "90vh" , 
-                            marginTop: "20vh"}}>
+                        <Formulario>
 
                             <Titulo name="Sua avaliação:"></Titulo>
 
@@ -206,7 +198,7 @@ class Avaliacoes extends Component{
                             </div>
                             
 
-                        </form>
+                        </Formulario>
 
                         <div data-aos="fade-up" style={{justifySelf: "end" , height: "10vh" , marginTop:"-70vh"}}>
 

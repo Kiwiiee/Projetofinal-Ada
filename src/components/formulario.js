@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
-const Formulario = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70vw;
-    background-color: #Caeae3;
+const Formulario = styled.form`
+        background: #Caeae3 ;
+        width: 65vw ;
+        display: flex ;
+        justify-content: center ;
+        align-items: center ;
+        flex-direction: column ;
+        margin-left: 2vw ;
+        height: 90vh;
+        margin-top: 20vh;
 
 `
 
