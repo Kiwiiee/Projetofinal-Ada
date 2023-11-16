@@ -1,9 +1,6 @@
 import '../css/login.css'
 import LoginContainer , { SigninContainer} from '../components/loginContainer'
-import Home from './Home'
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "../components/navbar"
 import Botao from "../components/botao"
 import Titulo from "../components/titulo"

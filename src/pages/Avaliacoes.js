@@ -7,7 +7,6 @@ import Formulario from "../components/formulario"
 import Avaliacao from "../components/avaliacao"
 import Titulo from "../components/titulo"
 import Botao from "../components/botao"
-import { useLocation } from 'react-router-dom'
 
 class Avaliacoes extends Component{
 

@@ -1,10 +1,4 @@
 import Nav from "./Itemnav"
-import Home from '../pages/Home'
-import Login from '../pages/Login'
-import GerenciarConta from '../pages/Gerenciar'
-import Avaliacoes from '../pages/Avaliacoes'
-import Recomendados from '../pages/Recomendados'
-import { BrowserRouter , Routes , Route} from 'react-router-dom'
 
 
 function Navbar(){

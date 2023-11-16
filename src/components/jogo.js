@@ -2,8 +2,6 @@ import Subtitulo from "../components/subtitulo"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
-import Texto from "../components/texto"
 
 function Jogo(props){
     useEffect(() => {

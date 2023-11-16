@@ -1,7 +1,6 @@
 import Navbar from '../components/navbar'
 import Container from '../components/container'
 import React, { Component } from 'react';
-import {TiChevronLeftOutline, TiChevronRightOutline} from 'https://cdn.skypack.dev/react-icons/ti';
 import Titulo from "../components/titulo"
 import Subtitulo from "../components/subtitulo"
 import { useState, useEffect } from "react";
@@ -10,6 +9,7 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 import Avaliacoes from '../pages/Avaliacoes'
 import { BrowserRouter , Routes , Route } from 'react-router-dom'
+import { Icon } from '@iconify/react';
 
 const MAX_VISIBILITY = 3;
 
@@ -32,7 +32,7 @@ const Carousel = ({children}) => {
 
   return (
     <div className='carousel' style={{marginTop: "-10vh" , marginRight: "5vw"}}>
-      {active > 0 && <button className='nav left' onClick={() => setActive(i => i - 1)}><TiChevronLeftOutline/></button>}
+      {active > 0 && <button className='nav left' onClick={() => setActive(i => i - 1)}><Icon icon="typcn:chevron-left-outline" /></button>}
       
       {React.Children.map(children, (child, i) => (
         <div className='card-container' style={{
@@ -47,7 +47,7 @@ const Carousel = ({children}) => {
           {child}
         </div>
       ))}
-      {active < count - 1 && <button className='nav right' onClick={() => setActive(i => i + 1)}><TiChevronRightOutline/></button>}
+      {active < count - 1 && <button className='nav right' onClick={() => setActive(i => i + 1)}><Icon icon="typcn:chevron-right-outline" /></button>}
     </div>
   );
 };

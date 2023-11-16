@@ -2,12 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './pages/App';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './pages/Home'
-import Login from './pages/Login'
-import GerenciarConta from './pages/Gerenciar'
-import Avaliacoes from './pages/Avaliacoes'
-import Recomendados from './pages/Recomendados'
 
 // const router = createBrowserRouter([
 //   {
